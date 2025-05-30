@@ -1,8 +1,13 @@
 import Articles from '@/partials/welcome/articles';
+import Contact from '@/partials/welcome/contact';
 import CTA from '@/partials/welcome/cta';
+import FAQ from '@/partials/welcome/faq';
+import Footer from '@/partials/welcome/footer';
 import Header from '@/partials/welcome/header';
 import Hero from '@/partials/welcome/hero';
 import HeroSecondary from '@/partials/welcome/hero-secondary';
+import License from '@/partials/welcome/license';
+import MortgageMoments from '@/partials/welcome/mortgage-moments';
 import MortgageProcess from '@/partials/welcome/mortgage-process';
 import Testimonials from '@/partials/welcome/testimonials';
 import WhatWeCanOffer from '@/partials/welcome/what-we-can-offer';
@@ -23,9 +28,13 @@ export default function Welcome() {
             <HeroSecondary />
             <CTA />
             <MortgageProcess />
-            {/* <MortgageMoments /> */}
+            <MortgageMoments />
             <Articles />
             <Testimonials />
+            <Contact />
+            <FAQ />
+            <License />
+            <Footer />
         </>
     );
 }

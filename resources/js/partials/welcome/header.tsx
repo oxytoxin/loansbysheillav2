@@ -1,10 +1,8 @@
-import AppLogoIcon from '@/components/app-logo-icon';
-
 export default function Header() {
     return (
         <div className="flex items-center justify-between px-32 py-8">
             <div>
-                <AppLogoIcon className="size-10" />
+                <div className="bg-card flex h-20 w-48 items-center justify-center">LOGO</div>
             </div>
             <div className="flex flex-col items-center">
                 <h3 className="font-semibold">FOR FREE CONSULTATION:</h3>
