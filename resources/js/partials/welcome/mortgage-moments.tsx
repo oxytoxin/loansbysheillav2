@@ -18,11 +18,11 @@ export default function MortgageMoments() {
     ];
 
     return (
-        <section className="relative -mt-72 select-none">
-            <div className="bg-primary relative pt-32">
+        <section className="relative -mt-96 select-none">
+            <div className="bg-primary relative pt-64">
                 <div className="absolute top-0 right-0 left-0 h-48 bg-white" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 0)' }} />
                 <div className="mx-auto px-4 pt-32 pb-48">
-                    <h2 className="mb-16 text-center text-5xl tracking-wide text-white">
+                    <h2 className="mb-20 text-center text-5xl tracking-wide text-white">
                         <strong>Mortgage</strong> Moments
                     </h2>
                     <div className="overflow-hidden">
@@ -64,7 +64,7 @@ export default function MortgageMoments() {
                         </div>
                     </div>
                 </div>
-                <div className="absolute right-0 bottom-0 left-0 h-48 bg-white" style={{ clipPath: 'polygon(0 0, 100% 100%, 100% 100%, 0 100%)' }} />
+                <div className="absolute right-0 -bottom-[0.3px] left-0 h-48 bg-white" style={{ clipPath: 'polygon(0 0, 100% 100%, 100% 100%, 0 100%)' }} />
             </div>
         </section>
     );

@@ -1,11 +1,11 @@
 export default function WhatWeCanOffer() {
     return (
-        <div className="mt-32">
-            <h3 className="text-primary text-center text-4xl">
+        <div className="mt-16">
+            <h3 className="text-primary text-center text-6xl">
                 What <span className="font-bold">We Can Offer</span>
             </h3>
-            <div className="mx-auto mt-12 flex max-w-7xl gap-16 px-32">
-                <div className="bg-card w-1/2 rounded-lg border-2 p-4 duration-300 hover:scale-105">
+            <div className="mx-auto mt-12 flex max-w-9xl gap-16 px-32 text-xl">
+                <div className="bg-card w-1/2 rounded-lg border-2 p-20 duration-300 hover:scale-105">
                     <h4 className="text-primary text-center text-2xl font-bold">Dedicated Client Service</h4>
                     <div className="mt-8 px-8 text-center">
                         <p>
@@ -17,7 +17,7 @@ export default function WhatWeCanOffer() {
                         </p>
                     </div>
                 </div>
-                <div className="bg-card w-1/2 rounded-lg border-2 p-4 duration-300 hover:scale-105">
+                <div className="bg-card w-1/2 rounded-lg border-2 p-20 duration-300 hover:scale-105">
                     <h4 className="text-primary text-center text-2xl font-bold">Comprehensive Loan Programs</h4>
                     <div className="mt-8 px-8 text-center">
                         <p>

@@ -67,6 +67,7 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
+
     *,
     ::after,
     ::before,
@@ -162,6 +163,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     quotes: '\201C' '\201D' '\2018' '\2019';
 }
+
 .blockquote::before {
     content: '“';
     font-weight: bold;

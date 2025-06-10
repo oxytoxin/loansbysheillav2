@@ -37,8 +37,8 @@ export default function FAQ() {
 
     return (
         <div className="relative mt-32">
-            <div className="mx-auto max-w-7xl px-8">
-                <h2 className="text-primary mb-12 text-center text-4xl">
+            <div className="mx-auto px-32">
+                <h2 className="text-primary mb-12 text-center text-6xl">
                     Frequently <strong>Asked Questions</strong>
                 </h2>
 
@@ -54,9 +54,8 @@ export default function FAQ() {
                                     </span>
                                 </button>
                                 <div
-                                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                                        openIndex === index ? 'max-h-96' : 'max-h-0'
-                                    }`}
+                                    className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-96' : 'max-h-0'
+                                        }`}
                                 >
                                     <div className="border-t border-gray-100 p-6 text-gray-600">{faq.answer}</div>
                                 </div>

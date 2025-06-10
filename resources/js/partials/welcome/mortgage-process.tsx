@@ -9,7 +9,7 @@ export default function MortgageProcess() {
     ];
 
     return (
-        <div className="bg-card relative z-10 mx-auto my-32 flex max-w-7xl flex-col gap-16 rounded-lg p-16">
+        <div className="bg-card relative z-10 mx-auto my-32 flex max-w-10/12 flex-col gap-16 rounded-lg p-16">
             <h2 className="text-primary text-center text-5xl">
                 Our <span className="font-bold">Mortgage Process</span>
             </h2>
