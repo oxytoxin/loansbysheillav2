@@ -32,8 +32,8 @@ export default function HeroSecondary() {
 
     return (
         <div className="bg-card mt-32 p-16">
-            <h3 className="text-center text-6xl font-semibold">
-                Are You <span className="text-primary">Looking To</span>
+            <h3 className="heading">
+                Are You Looking To
             </h3>
             <div className="mx-auto mt-20 flex max-w-7xl flex-wrap justify-center gap-16 text-white">
                 {items.map((item, index) => (

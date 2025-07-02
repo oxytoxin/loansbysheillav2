@@ -66,10 +66,10 @@ export default function Testimonials() {
 
     return (
         <div>
-            <h2 className="text-primary mt-32 mb-14 text-center text-4xl">
-                <strong>What My Clients Say</strong> About Me
+            <h2 className="heading mt-64">
+                What My Clients Say About Me
             </h2>
-            <div className="mx-32">
+            <div>
                 <Swiper centeredSlides={true} loop={true} spaceBetween={30} slidesPerView={4} className="p-8">
                     {testimonials.map((testimonial, index) => (
                         <SwiperSlide key={index}>

@@ -20,7 +20,7 @@ export default function MortgageMoments() {
     return (
         <section className="relative -mt-96 select-none">
             <div className="bg-primary relative pt-64">
-                <div className="absolute top-0 right-0 left-0 h-48 bg-white" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 0)' }} />
+                <div className="absolute top-0 -mt-[0.5px] right-0 left-0 h-48 bg-white" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 0)' }} />
                 <div className="mx-auto px-4 pt-32 pb-48">
                     <h2 className="mb-20 text-center text-5xl tracking-wide text-white">
                         <strong>Mortgage</strong> Moments

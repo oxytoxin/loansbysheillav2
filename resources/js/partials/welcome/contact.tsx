@@ -1,3 +1,6 @@
+import { Head } from "@inertiajs/react";
+import { useEffect } from "react";
+
 export default function Contact() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -5,115 +8,152 @@ export default function Contact() {
     };
 
     return (
-        <div className="bg-card mt-32 py-32">
-            <div className="mx-auto grid max-w-7xl grid-cols-2 gap-16 px-8">
-                {/* Contact Form */}
-                <div className="rounded-2xl bg-white p-8 shadow-sm">
-                    <h2 className="text-primary mb-8 text-4xl">Get In Touch With Us</h2>
 
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                        <div className="grid grid-cols-2 gap-4">
-                            <input type="text" placeholder="Name" className="rounded-lg border border-gray-200 px-4 py-2" />
-                            <input type="tel" placeholder="Phone" className="rounded-lg border border-gray-200 px-4 py-2" />
-                        </div>
+        <>
+            <Head>
+                <script src="https://embed.homebotapp.com/lgw/v1/widget.js"></script>
+            </Head>
+            <div className="bg-card mt-32 py-32">
+                <div className="mx-auto grid grid-cols-2 max-w-7xl gap-16 px-8">
+                    {/* Contact Details */}
+                    <div>
+                        <h2 className="text-primary mb-8 text-4xl font-semibold">Contact Details</h2>
 
-                        <input type="email" placeholder="Email Address" className="rounded-lg border border-gray-200 px-4 py-2" />
-
-                        <textarea placeholder="Message" rows={4} className="rounded-lg border border-gray-200 px-4 py-2" />
-
-                        <div className="flex items-start gap-2">
-                            <input type="checkbox" id="consent" className="mt-1.5" />
-                            <label htmlFor="consent" className="text-sm">
-                                I consent to receive <strong className="text-red-500"> SMS TEXT MESSAGES</strong> from
-                                <strong className="text-red-500"> LOANS BY SHEILLA</strong> (our message frequency may vary). Message & data rates may
-                                apply. Reply <strong className="text-red-500">STOP</strong> to unsubscribe from further messaging. Reply
-                                <strong className="text-red-500"> HELP</strong> for more information. See our Terms of Service & Privacy Policy.
-                            </label>
-                        </div>
-
-                        <button type="submit" className="bg-primary mt-4 w-32 cursor-pointer rounded-full py-3 text-white">
-                            SUBMIT
-                        </button>
-                    </form>
-                </div>
-
-                {/* Contact Details */}
-                <div>
-                    <h2 className="text-primary mb-8 text-4xl">Contact Details</h2>
-
-                    <div className="flex flex-col gap-4">
-                        <div className="flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm">
-                            <div className="bg-primary flex h-12 w-12 items-center justify-center rounded-lg text-white">
-                                <PhoneIcon className="h-6 w-6" />
+                        <div className="flex flex-col gap-4">
+                            <div className="flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm">
+                                <div className="bg-primary flex h-12 w-12 items-center justify-center rounded-lg text-white">
+                                    <PhoneIcon className="h-6 w-6" />
+                                </div>
+                                <div>
+                                    <div className="font-semibold">Phone</div>
+                                    <div>(425) 900 6082 #101</div>
+                                </div>
                             </div>
-                            <div>
-                                <div className="font-semibold">Phone</div>
-                                <div>(425) 900 6082 #101</div>
-                            </div>
-                        </div>
 
-                        <div className="flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm">
-                            <div className="bg-primary flex h-12 w-12 items-center justify-center rounded-lg text-white">
-                                <EnvelopeIcon className="h-6 w-6" />
+                            <div className="flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm">
+                                <div className="bg-primary flex h-12 w-12 items-center justify-center rounded-lg text-white">
+                                    <EnvelopeIcon className="h-6 w-6" />
+                                </div>
+                                <div>
+                                    <div className="font-semibold">Email</div>
+                                    <div>info@loansbysheilla.com</div>
+                                </div>
                             </div>
-                            <div>
-                                <div className="font-semibold">Email</div>
-                                <div>info@loansbysheilla.com</div>
-                            </div>
-                        </div>
 
-                        <div className="flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm">
-                            <div className="bg-primary flex h-12 w-12 items-center justify-center rounded-lg text-white">
-                                <MapPinIcon className="h-6 w-6" />
+                            <div className="flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm">
+                                <div className="bg-primary flex h-12 w-12 items-center justify-center rounded-lg text-white">
+                                    <MapPinIcon className="h-6 w-6" />
+                                </div>
+                                <div>
+                                    <div className="font-semibold">Location</div>
+                                    <div>14205 SE 36th St, STE 112, Bellevue, WA 98006</div>
+                                </div>
                             </div>
-                            <div>
-                                <div className="font-semibold">Location</div>
-                                <div>14205 SE 36th St, STE 112, Bellevue, WA 98006</div>
-                            </div>
-                        </div>
 
-                        <div className="flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm">
-                            <div className="bg-primary flex h-12 w-12 items-center justify-center rounded-lg text-white">
-                                <ClockIcon className="h-6 w-6" />
+                            <div className="flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm">
+                                <div className="bg-primary flex h-12 w-12 items-center justify-center rounded-lg text-white">
+                                    <ClockIcon className="h-6 w-6" />
+                                </div>
+                                <div>
+                                    <div className="font-semibold">Availability</div>
+                                    <div>8:00 AM to 6:00 PM (Pacific Time)</div>
+                                </div>
                             </div>
-                            <div>
-                                <div className="font-semibold">Availability</div>
-                                <div>8:00 AM to 6:00 PM (Pacific Time)</div>
-                            </div>
-                        </div>
 
-                        <div className="flex items-center justify-between rounded-lg bg-white p-4 shadow-sm">
-                            <div className="font-semibold">Social Media</div>
-                            <div className="flex gap-2">
-                                {['facebook', 'instagram', 'linkedin', 'youtube', 'tiktok'].map((social) => (
-                                    <a
-                                        key={social}
-                                        href="#"
-                                        target="_blank"
-                                        className="bg-primary flex h-10 w-10 items-center justify-center rounded-xl text-white"
-                                    >
-                                        <span className="sr-only">{social}</span>
-                                        <SocialIcon type={social} className="h-5 w-5" />
-                                    </a>
-                                ))}
+                            <div className="flex items-center justify-between rounded-lg bg-white p-4 shadow-sm">
+                                <div className="font-semibold">Social Media</div>
+                                <div className="flex gap-2">
+                                    {['facebook', 'instagram', 'linkedin', 'youtube', 'tiktok'].map((social) => (
+                                        <a
+                                            key={social}
+                                            href="#"
+                                            target="_blank"
+                                            className="bg-primary flex h-10 w-10 items-center justify-center rounded-xl text-white"
+                                        >
+                                            <span className="sr-only">{social}</span>
+                                            <SocialIcon type={social} className="h-5 w-5" />
+                                        </a>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    {/* Contact Form */}
+                    <div className="rounded-2xl bg-white p-8 shadow-sm">
+                        <h2 className="text-primary mb-8 text-4xl font-semibold">Get In Touch With Us</h2>
 
-                <div className="col-span-2">
-                    <div className="flex items-center justify-between rounded-lg bg-white p-4 shadow-sm">
-                        <input type="text" placeholder="Where do you want to buy a home?" className="flex-1 px-4" />
-                        <button className="bg-primary rounded-lg px-8 py-2 text-white">CHECK</button>
-                    </div>
-                    <div className="mt-2 text-sm text-gray-500">
-                        Powered by <strong>HomeBot</strong>
+                        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                            <div className="grid grid-cols-2 gap-4">
+                                <input type="text" placeholder="Name" className="rounded-lg border border-gray-200 px-4 py-2" />
+                                <input type="tel" placeholder="Phone" className="rounded-lg border border-gray-200 px-4 py-2" />
+                            </div>
+
+                            <input type="email" placeholder="Email Address" className="rounded-lg border border-gray-200 px-4 py-2" />
+
+                            <textarea placeholder="Message" rows={4} className="rounded-lg border border-gray-200 px-4 py-2" />
+
+                            <div className="flex items-start gap-2">
+                                <input type="checkbox" id="consent" className="mt-1.5" />
+                                <label htmlFor="consent" className="text-sm">
+                                    I consent to receive <strong className="text-red-500"> SMS TEXT MESSAGES</strong> from
+                                    <strong className="text-red-500"> LOANS BY SHEILLA</strong> (our message frequency may vary). Message & data rates may
+                                    apply. Reply <strong className="text-red-500">STOP</strong> to unsubscribe from further messaging. Reply
+                                    <strong className="text-red-500"> HELP</strong> for more information. See our Terms of Service & Privacy Policy.
+                                </label>
+                            </div>
+
+                            <button type="submit" className="bg-primary mt-4 w-32 cursor-pointer rounded-full py-3 text-white">
+                                SUBMIT
+                            </button>
+                        </form>
                     </div>
                 </div>
+                <HomebotInlineScript />
+
             </div>
-        </div>
+        </>
     );
 }
+
+declare global {
+    interface Window {
+        Homebot?: any;
+    }
+}
+
+const HomebotInlineScript = () => {
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.innerHTML = `
+        (function (h,b) { 
+          var w = window, d = document, s = 'script', x, y; 
+          w['__hb_namespace'] = h; 
+          w[h] = w[h] || function () {
+            (w[h].q = w[h].q || []).push(arguments)
+          }; 
+          y = d.createElement(s); 
+          x = d.getElementsByTagName(s)[0]; 
+          y.async = 1; 
+          y.src = b; 
+          x.parentNode.insertBefore(y,x)
+        })('Homebot','https://embed.homebotapp.com/lgw/v1/widget.js'); 
+  
+        window.Homebot && window.Homebot('#homebot_homeowner', '319cbc4bbc6649b7b8415dd0f3100a6fd9fe0e49490a9156', {
+          mode: 'buyers-mode'
+        });
+      `;
+        script.type = 'text/javascript';
+        document.body.appendChild(script);
+
+        return () => {
+            document.body.removeChild(script);
+            const container = document.getElementById('homebot_homeowner');
+            if (container) container.innerHTML = '';
+        };
+    }, []);
+
+    return <div id="homebot_homeowner" className="w-full mt-24" />;
+};
 
 function PhoneIcon(props: React.SVGProps<SVGSVGElement>) {
     return (

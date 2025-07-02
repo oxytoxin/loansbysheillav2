@@ -84,7 +84,7 @@
     --card-foreground: oklch(0.145 0 0);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.145 0 0);
-    --primary: #265d41;
+    --primary: #095d40;
     --primary-foreground: oklch(0.985 0 0);
     --secondary: #c1ff72;
     --secondary-foreground: oklch(0.205 0 0);
@@ -169,4 +169,8 @@
     font-weight: bold;
     font-size: 120px;
     color: #265d41;
+}
+
+.heading {
+    @apply text-primary mb-16 font-bold text-center text-6xl;
 }
