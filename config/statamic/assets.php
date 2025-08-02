@@ -39,7 +39,7 @@ return [
         |
         */
 
-        'driver' => 'gd',
+        'driver' => env('IMAGE_MANIPULATION_DRIVER', 'gd'),
 
         /*
         |--------------------------------------------------------------------------
@@ -76,7 +76,7 @@ return [
         |--------------------------------------------------------------------------
         |
         | You may define global defaults for all manipulation parameters, such as
-        | quality, format, and sharpness. These can and will be overwritten
+        | quality, format, and sharpness. These can and will be be overwritten
         | on the tag parameter level as well as the preset level.
         |
         */
@@ -92,13 +92,12 @@ return [
         |
         | Rather than specifying your manipulation params in your templates with
         | the glide tag, you may define them here and reference their handles.
-        | They may also be automatically generated when you upload assets.
-        | Containers can be configured to warm these caches on upload.
+        | They will also be automatically generated when you upload assets.
         |
         */
 
         'presets' => [
-            // 'small' => ['w' => 200, 'h' => 200, 'q' => 75, 'fit' => 'crop'],
+            'replacement' => ['w' => 4500, 'fit' => 'max'],
         ],
 
         /*
@@ -122,7 +121,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Enabling this will make Glide automatically crop assets at their focal
-    | point (which is the center if no focal point is defined). Otherwise,
+    | point (at at the center if no focal point is defined). Otherwise,
     | you will need to manually add any crop related parameters.
     |
     */

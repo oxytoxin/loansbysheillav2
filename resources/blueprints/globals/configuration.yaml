@@ -3,30 +3,6 @@ tabs:
     display: General
     sections:
       -
-        display: General
-        fields:
-          -
-            handle: verbiage_text
-            field:
-              buttons:
-                - h2
-                - h3
-                - bold
-                - italic
-                - unorderedlist
-                - orderedlist
-                - removeformat
-                - quote
-                - anchor
-                - image
-                - table
-                - color
-              remove_empty_nodes: false
-              type: bard
-              display: 'Verbiage Text'
-              validate:
-                - required
-      -
         display: 'System pages'
         instructions: 'Configure system pages.'
         fields:
@@ -48,10 +24,15 @@ tabs:
           -
             handle: copyright_name
             field:
+              input_type: text
+              antlers: false
               display: 'Copyright name'
               type: text
+              icon: text
               instructions: 'Falls back to the application name.'
               width: 50
+              listable: hidden
+              instructions_position: above
           -
             handle: copyright_since
             field:
@@ -59,11 +40,15 @@ tabs:
               input_type: number
               character_limit: 4
               prepend: ©
+              antlers: false
               default: '2020'
               display: 'Copyright since'
               instructions: 'The website will add ` - current_year ` if they differ.'
               type: text
+              icon: text
               width: 50
+              listable: hidden
+              instructions_position: above
               validate:
                 - required
       -

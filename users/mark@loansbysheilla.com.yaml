@@ -1,0 +1,21 @@
+super: true
+name: 'Mark John Lerry Casero'
+id: f1a65836-c027-40c0-9fc2-8a99ebc377fa
+password_hash: $2y$12$Jj1eHaPdr/gvatA0tfg8N.K81RTC7oxrXYu5bT9jZGvgxbnTdBwOi
+preferences:
+  collections:
+    articles:
+      columns:
+        - title
+        - author
+        - slug
+        - date
+        - status
+  forms:
+    contact:
+      columns:
+        - datestamp
+        - name
+        - email
+        - phone
+  theme: light
