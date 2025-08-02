@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 @import 'tailwindcss';
 @plugin 'tailwindcss-animate';
 
@@ -8,7 +10,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-    --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans:
+        'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
     --radius-lg: var(--radius);
     --radius-md: calc(var(--radius) - 2px);
@@ -83,7 +86,7 @@
     --card-foreground: oklch(0.145 0 0);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.145 0 0);
-    --primary: #265d41;
+    --primary: #095d40;
     --primary-foreground: oklch(0.985 0 0);
     --secondary: #c1ff72;
     --secondary-foreground: oklch(0.205 0 0);
@@ -162,9 +165,14 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     quotes: '\201C' '\201D' '\2018' '\2019';
 }
+
 .blockquote::before {
     content: '“';
     font-weight: bold;
     font-size: 120px;
     color: #265d41;
+}
+
+.heading {
+    @apply text-primary mb-16 text-center text-6xl font-bold;
 }

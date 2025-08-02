@@ -20,7 +20,7 @@ export default function Navbar() {
         },
         {
             label: 'REVIEWS',
-            href: '/reviews',
+            href: '#reviews',
         },
         {
             label: 'CONTACT',
@@ -30,27 +30,30 @@ export default function Navbar() {
     const { url } = usePage();
 
     return (
-        <div className="bg-primary absolute -top-7 z-10 flex justify-between gap-56 rounded-2xl px-6 py-4 text-white">
-            <ul className="flex items-center justify-center gap-12">
+        <div className="bg-primary flex w-full justify-between gap-12 px-32 py-4 text-white">
+            <ul className="flex items-center justify-center gap-8">
                 {navItems.map((item) => (
-                    <li className="text-xl tracking-wider" key={item.label}>
-                        <Link
-                            href={item.href}
-                            className={url === item.href ? 'border-b-[1.5px] border-white pb-1' : 'pb-1 hover:border-b-[1.5px] hover:border-white'}
-                        >
+                    <li className="text-lg tracking-wider" key={item.label}>
+                        <Link href={item.href} className={url === item.href ? 'text-secondary pb-1' : 'hover:text-secondary pb-1 duration-300'}>
                             {item.label}
                         </Link>
                     </li>
                 ))}
             </ul>
-            <ul className="flex items-center gap-2">
+            <ul className="flex items-center gap-12">
                 <li>
-                    <Link className="bg-secondary hover:bg-accent rounded-full px-4 py-2 text-black transition duration-300" href="/">
+                    <Link
+                        className="hover:bg-secondary inline-block rounded-full bg-white px-8 py-1 text-xl font-bold whitespace-nowrap text-black transition duration-300"
+                        href="/"
+                    >
                         APPLY NOW
                     </Link>
                 </li>
                 <li>
-                    <Link className="rounded-full bg-[#C1FF72] px-4 py-2 text-black transition duration-300 hover:bg-[#F4F5F8]" href="/">
+                    <Link
+                        className="hover:bg-secondary inline-block rounded-full bg-white px-8 py-1 text-xl font-bold whitespace-nowrap text-black transition duration-300"
+                        href="/"
+                    >
                         SIGN IN
                     </Link>
                 </li>

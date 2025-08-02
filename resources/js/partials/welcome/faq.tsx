@@ -29,6 +29,18 @@ export default function FAQ() {
             question: 'Where is Loans by Sheilla available?',
             answer: "Loans by Sheilla serves clients throughout Washington state, with our main office located in Bellevue. We can assist you whether you're buying in Seattle, Bellevue, Redmond, or any other location in Washington.",
         },
+        {
+            question: "How do I reach Loans By Sheilla's customer service?",
+            answer: "You can email us your queries at info@loansbysheilla.com or call us at (425) 900-6082. We are available from Mondays to Fridays, 8AM-5PM, Pacific Standard Time.",
+        },
+        {
+            question: "What do I need to apply?",
+            answer: "To apply for a loan with Loans By Sheilla, you generally need to provide personal information, identification, and income verification documents. You'll also need to share employment details and complete the lender's application form.",
+        },
+        {
+            question: "How can Loans By Sheilla help me get a pre-approval letter?",
+            answer: "Loans By Sheilla can help you obtain a pre-approval letter by first assessing your financial information, including your income, credit history, and debt-to-income ratio. Once your application is reviewed and deemed eligible, they will issue a pre-approval letter indicating the loan amount you qualify for. This letter can be beneficial for demonstrating your financial credibility to potential sellers or real estate agents when purchasing a home.",
+        },
     ];
 
     const toggleQuestion = (index: number) => {
@@ -37,43 +49,27 @@ export default function FAQ() {
 
     return (
         <div className="relative mt-32">
-            <div className="mx-auto max-w-7xl px-8">
-                <h2 className="text-primary mb-12 text-center text-4xl">
-                    Frequently <strong>Asked Questions</strong>
+            <div className="mx-auto px-96">
+                <h2 className="heading mb-12">
+                    Frequently Asked Questions
                 </h2>
-
-                <div className="grid grid-cols-2 gap-16">
-                    {/* FAQ Questions */}
-                    <div className="flex flex-col gap-4">
-                        {faqs.map((faq, index) => (
-                            <div key={index} className="overflow-hidden rounded-2xl bg-white shadow-sm">
-                                <button onClick={() => toggleQuestion(index)} className="flex w-full items-center justify-between p-6 text-left">
-                                    <span className="text-lg">{faq.question}</span>
-                                    <span className="text-primary ml-4">
-                                        {openIndex === index ? <MinusIcon className="h-6 w-6" /> : <PlusIcon className="h-6 w-6" />}
-                                    </span>
-                                </button>
-                                <div
-                                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                                        openIndex === index ? 'max-h-96' : 'max-h-0'
+                <div className="flex flex-col gap-4">
+                    {faqs.map((faq, index) => (
+                        <div key={index} className="overflow-hidden rounded-2xl bg-white shadow-sm">
+                            <button onClick={() => toggleQuestion(index)} className="flex w-full items-center justify-between p-6 text-left">
+                                <span className="text-lg">{faq.question}</span>
+                                <span className="text-primary ml-4">
+                                    {openIndex === index ? <MinusIcon className="h-6 w-6" /> : <PlusIcon className="h-6 w-6" />}
+                                </span>
+                            </button>
+                            <div
+                                className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-96' : 'max-h-0'
                                     }`}
-                                >
-                                    <div className="border-t border-gray-100 p-6 text-gray-600">{faq.answer}</div>
-                                </div>
+                            >
+                                <div className="border-t border-gray-100 p-6 text-gray-600">{faq.answer}</div>
                             </div>
-                        ))}
-                    </div>
-
-                    {/* Image */}
-                    <div className="relative">
-                        <div className="overflow-hidden rounded-2xl">
-                            <img
-                                src="https://images.pexels.com/photos/1368484/pexels-photo-1368484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                alt="Woman using phone"
-                                className="h-full w-full object-cover"
-                            />
                         </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>

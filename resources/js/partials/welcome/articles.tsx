@@ -6,11 +6,11 @@ import SwiperControls from './swiper-controls';
 
 export default function Articles() {
     return (
-        <div className="mx-32 flex flex-col items-center justify-center">
-            <h2 className="text-primary text-4xl">
+        <div className="mx-32 mt-16 flex flex-col items-center justify-center">
+            <h2 className="text-primary my-8 text-4xl">
                 Know More About <strong>Homebuying</strong>
             </h2>
-            <div className="relative w-full max-w-7xl">
+            <div className="relative w-full">
                 <Swiper
                     loop={true}
                     slidesPerView={1}
@@ -18,8 +18,8 @@ export default function Articles() {
                 >
                     {Array.from({ length: 5 }).map((_, slideIndex) => (
                         <SwiperSlide key={slideIndex}>
-                            <div className="grid grid-cols-3 gap-8 p-8">
-                                {Array.from({ length: 6 }).map((_, cardIndex) => (
+                            <div className="grid grid-cols-4 gap-8 p-8">
+                                {Array.from({ length: 8 }).map((_, cardIndex) => (
                                     <ArticleCard key={cardIndex} />
                                 ))}
                             </div>

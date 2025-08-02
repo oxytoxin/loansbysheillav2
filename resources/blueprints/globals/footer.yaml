@@ -1,0 +1,62 @@
+tabs:
+  main:
+    display: Footer
+    sections:
+      - fields:
+          - handle: title
+            field:
+              type: text
+              display: 'Footer Title'
+              validate:
+                - required
+              width: 50
+          - handle: subtitle
+            field:
+              type: text
+              display: 'Footer Subtitle'
+              width: 50
+          - handle: details
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: 'Footer Details'
+          - handle: socials
+            field:
+              type: grid
+              display: 'Footer Socials'
+              fields:
+                - handle: icon
+                  field:
+                    type: iconify
+                    display: Icon
+                    validate:
+                      - required
+                    store_as: svg_data
+                - handle: link
+                  field:
+                    type: link
+                    display: Link
+                    validate:
+                      - required
+          - handle: about
+            field:
+              type: grid
+              display: 'Footer About'
+              fields:
+                - handle: title
+                  field:
+                    type: text
+                    display: Title
+                    validate:
+                      - required
+                - handle: link
+                  field:
+                    type: link
+                    display: Link
+                    validate:
+                      - required
+          - handle: contact
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: 'Footer Contact'
