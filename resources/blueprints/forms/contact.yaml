@@ -1,0 +1,48 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              display: Name
+              type: text
+              validate:
+                - required
+                - 'min:2'
+              localizable: true
+              placeholder: 'Full Name'
+          -
+            handle: phone
+            field:
+              type: text
+              display: Phone
+              width: 50
+          -
+            handle: email
+            field:
+              display: 'Email address'
+              type: text
+              validate:
+                - required
+                - email
+              localizable: true
+              width: 50
+          -
+            handle: message
+            field:
+              display: Message
+              type: textarea
+              validate:
+                - required
+                - 'min:5'
+              localizable: true
+          -
+            handle: verbiage
+            field:
+              type: checkboxes
+              display: Verbiage
+              validate:
+                - required

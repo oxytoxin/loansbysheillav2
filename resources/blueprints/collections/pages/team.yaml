@@ -1,0 +1,153 @@
+hide: true
+title: Team
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: General
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              localizable: true
+              listable: true
+              display: Title
+              validate:
+                - required
+          -
+            handle: members
+            field:
+              type: grid
+              fields:
+                -
+                  handle: info
+                  field:
+                    type: group
+                    display: Info
+                    fields:
+                      -
+                        handle: image
+                        field:
+                          max_files: 1
+                          min_files: 1
+                          container: images
+                          folder: team
+                          restrict: true
+                          type: assets
+                          display: Image
+                          validate:
+                            - required
+                          width: 50
+                      -
+                        handle: background_color
+                        field:
+                          default: '#2ba050'
+                          type: color
+                          display: 'Background Color'
+                          validate:
+                            - required
+                          width: 50
+                      -
+                        handle: name
+                        field:
+                          type: text
+                          display: Name
+                          width: 50
+                      -
+                        handle: position
+                        field:
+                          type: text
+                          display: Position
+                          validate:
+                            - required
+                          width: 50
+                      -
+                        handle: bio
+                        field:
+                          type: textarea
+                          display: Bio
+                          validate:
+                            - required
+                      -
+                        handle: links
+                        field:
+                          type: grid
+                          display: Links
+                          fields:
+                            -
+                              handle: icon
+                              field:
+                                store_as: svg_data
+                                type: iconify
+                                display: Icon
+                                width: 50
+                                validate:
+                                  - required
+                            -
+                              handle: link
+                              field:
+                                type: link
+                                display: Link
+                                width: 50
+                                validate:
+                                  - required
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Basic
+        instructions: 'Basic SEO settings.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_basic'
+      -
+        display: Advanced
+        instructions: 'Advanced SEO settings.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_advanced'
+      -
+        display: 'Open Graph'
+        instructions: 'Open Graph meta tags for social sharing.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_open_graph'
+      -
+        display: Sitemap
+        instructions: 'Sitemap configuration.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_sitemap'
+      -
+        display: 'JSON-ld Schema'
+        instructions: 'Custom JSON-ld schema objects.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_jsonld'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        display: Meta
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate:
+                - required
+              display: Slug
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+              display: Parent

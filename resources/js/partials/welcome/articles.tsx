@@ -6,8 +6,8 @@ import SwiperControls from './swiper-controls';
 
 export default function Articles() {
     return (
-        <div className="mx-32 flex flex-col items-center justify-center">
-            <h2 className="text-primary text-4xl">
+        <div className="mx-32 mt-16 flex flex-col items-center justify-center">
+            <h2 className="text-primary my-8 text-4xl">
                 Know More About <strong>Homebuying</strong>
             </h2>
             <div className="relative w-full">

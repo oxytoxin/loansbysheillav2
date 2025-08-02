@@ -1,0 +1,28 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: logo
+            field:
+              max_files: 1
+              min_files: 1
+              container: images
+              type: assets
+              display: Logo
+          -
+            handle: cta
+            field:
+              type: text
+              display: CTA
+              validate:
+                - required
+          -
+            handle: loan_factory_logo
+            field:
+              max_files: 1
+              container: images
+              type: assets
+              display: 'Loan Factory Logo'
