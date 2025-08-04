@@ -3,7 +3,6 @@ import Contact from '@/partials/welcome/contact';
 import CTA from '@/partials/welcome/cta';
 import FAQ from '@/partials/welcome/faq';
 import Footer from '@/partials/welcome/footer';
-import Header from '@/partials/welcome/header';
 import Hero from '@/partials/welcome/hero';
 import HeroSecondary from '@/partials/welcome/hero-secondary';
 import License from '@/partials/welcome/license';
@@ -13,6 +12,7 @@ import Testimonials from '@/partials/welcome/testimonials';
 import WhatWeCanOffer from '@/partials/welcome/what-we-can-offer';
 import {Head} from '@inertiajs/react';
 import {ArticlesGroups, FAQSections, MortgageMoment} from "@/types/props";
+import MainLayout from "@/layouts/main-layout";
 
 export default function Welcome({mortgage_moments, faq_sections, articles_groups}: {
     mortgage_moments: MortgageMoment[],
@@ -29,19 +29,20 @@ export default function Welcome({mortgage_moments, faq_sections, articles_groups
             </div>
             <div>
                 <Head title="Welcome"/>
-                <Header/>
-                <Hero/>
-                <WhatWeCanOffer/>
-                <HeroSecondary/>
-                <CTA/>
-                <MortgageProcess/>
-                <MortgageMoments {...{mortgage_moments}}/>
-                <Articles {...{articles_groups: articles_groups}} />
-                <Testimonials/>
-                <Contact/>
-                <FAQ {...{faq_sections}}/>
-                <License/>
-                <Footer/>
+                <MainLayout>
+                    <Hero/>
+                    <WhatWeCanOffer/>
+                    <HeroSecondary/>
+                    <CTA/>
+                    <MortgageProcess/>
+                    <MortgageMoments {...{mortgage_moments}}/>
+                    <Articles {...{articles_groups: articles_groups}} />
+                    <Testimonials/>
+                    <Contact/>
+                    <FAQ {...{faq_sections}}/>
+                    <License/>
+                    <Footer/>
+                </MainLayout>
             </div>
         </>
     );

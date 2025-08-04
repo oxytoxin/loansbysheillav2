@@ -12,15 +12,15 @@ export default function Navbar() {
         },
         {
             label: 'CALCULATOR',
-            href: '#calculator',
+            href: '/#calculator',
         },
         {
             label: 'LEARN',
-            href: '/learn',
+            href: '/#articles',
         },
         {
             label: 'REVIEWS',
-            href: '#reviews',
+            href: '/#reviews',
         },
         {
             label: 'CONTACT',

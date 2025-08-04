@@ -8,7 +8,7 @@ import {ArticlesGroups} from "@/types/props";
 export default function Articles({articles_groups}: { articles_groups: ArticlesGroups }) {
 
     return (
-        <div className="mx-32 mt-16 flex flex-col items-center justify-center">
+        <div id="articles" className="mx-32 mt-16 flex flex-col items-center justify-center">
             <h2 className="text-primary my-8 text-4xl">
                 Know More About <strong>Homebuying</strong>
             </h2>

@@ -1,11 +1,9 @@
 import {Link} from '@inertiajs/react';
 import {RiFacebookFill, RiInstagramFill, RiLinkedinFill, RiTiktokFill, RiYoutubeFill} from '@remixicon/react';
-import Navbar from './navbar';
 
 export default function Hero() {
     return (
         <>
-            <Navbar/>
             <div className="relative flex flex-col items-center">
                 <div className="w-full">
                     <img
