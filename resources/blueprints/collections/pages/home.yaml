@@ -117,48 +117,6 @@ tabs:
               type: assets
               display: 'CTA2 Image'
               min_files: 1
-  mortgage_moments:
-    display: 'Mortgage Moments'
-    sections:
-      -
-        display: Main
-        fields:
-          -
-            handle: mortgage_moments_title
-            field:
-              type: text
-              display: 'Mortgage Moments Title'
-              validate:
-                - required
-          -
-            handle: mortgage_moments_subtitle
-            field:
-              type: text
-              display: 'Mortgage Moments Subtitle'
-              validate:
-                - required
-          -
-            handle: mortgage_moments_cta
-            field:
-              remove_empty_nodes: false
-              type: bard
-              display: 'Mortgage Moments CTA'
-              validate:
-                - required
-      -
-        display: Moments
-        fields:
-          -
-            handle: mortgage_moments_entries
-            field:
-              type: grid
-              display: 'Mortgage Moments Entries'
-              fields:
-                -
-                  handle: mortgage_moments_entry
-                  field:
-                    type: video
-                    display: 'Mortgage Moments Entry'
   faq:
     display: FAQ
     sections:

@@ -11,8 +11,14 @@ import MortgageMoments from '@/partials/welcome/mortgage-moments';
 import MortgageProcess from '@/partials/welcome/mortgage-process';
 import Testimonials from '@/partials/welcome/testimonials';
 import WhatWeCanOffer from '@/partials/welcome/what-we-can-offer';
-import { Head } from '@inertiajs/react';
-export default function Welcome() {
+import {Head} from '@inertiajs/react';
+import {ArticlesGroups, FAQSections, MortgageMoment} from "@/types/props";
+
+export default function Welcome({mortgage_moments, faq_sections, articles_groups}: {
+    mortgage_moments: MortgageMoment[],
+    faq_sections: FAQSections,
+    articles_groups: ArticlesGroups
+}) {
     return (
         <>
             <div className="bg-primary fixed inset-0 z-10 grid place-items-center text-white sm:hidden">
@@ -21,20 +27,22 @@ export default function Welcome() {
                     <h1 className="mt-4 text-2xl font-semibold">Loans By Sheilla</h1>
                 </div>
             </div>
-            <Head title="Welcome" />
-            <Header />
-            <Hero />
-            <WhatWeCanOffer />
-            <HeroSecondary />
-            <CTA />
-            <MortgageProcess />
-            <MortgageMoments />
-            <Articles />
-            <Testimonials />
-            <Contact />
-            <FAQ />
-            <License />
-            <Footer />
+            <div>
+                <Head title="Welcome"/>
+                <Header/>
+                <Hero/>
+                <WhatWeCanOffer/>
+                <HeroSecondary/>
+                <CTA/>
+                <MortgageProcess/>
+                <MortgageMoments {...{mortgage_moments}}/>
+                <Articles {...{articles_groups: articles_groups}} />
+                <Testimonials/>
+                <Contact/>
+                <FAQ {...{faq_sections}}/>
+                <License/>
+                <Footer/>
+            </div>
         </>
     );
 }

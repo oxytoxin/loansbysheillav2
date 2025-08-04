@@ -1,0 +1,34 @@
+title: FAQ
+data:
+  faq_sections:
+    - id: m0kmu360
+      faq_section:
+        title: 'Mortgage Process'
+        entries:
+          - id: m0kmu9mr
+            question: 'What is Loans by Sheilla?'
+            answer: 'Loans By Sheilla is a dedicated mortgage brokerage service spearheaded by Sheilla Lavadia, a seasoned mortgage professional with over 20 years of experience in the industry. Our mission is to empower individuals and families to achieve their homeownership dreams by providing knowledgeable, personalized, and efficient mortgage solutions tailored to meet diverse financial needs.'
+          - id: m0kmui1b
+            question: 'Who is Sheilla Lavadia?'
+            answer: "Sheilla Lavadia is a highly regarded mortgage broker whose extensive experience set her apart in the competitive mortgage landscape. With a strong commitment to client education and satisfaction, Sheilla has mastered the intricacies of mortgage financing and is passionate about guiding her clients through every step of the process. Her wealth of knowledge enables her to tailor mortgage options and solutions that align with each client's unique financial circumstances."
+          - id: m0kmunse
+            question: 'What Services Do We Offer?'
+            answer: |-
+              At Loans By Sheilla, we offer a wide variety of mortgage-related services, including home purchase loans, refinancing options, pre-approval services, investment property financing, and tailored guidance.
+
+              Just tell us about yourself, your preferences and finances, and we'll provide you with the best rate that suits your situation.
+          - id: m0kmuoxf
+            question: 'Why Choose Loans By Sheilla?'
+            answer: "At Loans By Sheilla, clients benefit from Sheilla Lavadia's 20 years of experience, ensuring expert guidance and customized mortgage solutions tailored to individual needs. Our commitment to transparent communication and personalized service empowers clients to make informed decisions throughout the entire mortgage process."
+          - id: m14ueilp
+            question: 'Where is Loans By Sheilla available?'
+            answer: 'Loans By Sheilla is available in the following states: Washington, Arkansas, Texas, California, Florida, Oregon, and Arizona.'
+          - id: m14uf9sl
+            question: "How do I reach Loans By Sheilla's customer service?"
+            answer: 'You can email us your queries at info@loansbysheilla.com or call us at (425) 900-6082. We are available from Mondays to Fridays, 8AM-5PM, Pacific Standard Time.'
+          - id: m14ujdm2
+            question: 'What do I need to apply?'
+            answer: "To apply for a loan with Loans By Sheilla, you generally need to provide personal information, identification, and income verification documents. You'll also need to share employment details and complete the lender's application form."
+          - id: m14um97p
+            question: 'How can Loans By Sheilla help me get a pre-approval letter?'
+            answer: 'Loans By Sheilla can help you obtain a pre-approval letter by first assessing your financial information, including your income, credit history, and debt-to-income ratio. Once your application is reviewed and deemed eligible, they will issue a pre-approval letter indicating the loan amount you qualify for. This letter can be beneficial for demonstrating your financial credibility to potential sellers or real estate agents when purchasing a home.'

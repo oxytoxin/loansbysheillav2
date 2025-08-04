@@ -1,5 +1,5 @@
-import { Link } from '@inertiajs/react';
-import { useState } from 'react';
+import {Link} from '@inertiajs/react';
+import {useState} from 'react';
 
 function MortgageCalculator() {
     const [homePrice, setHomePrice] = useState(2000000);
@@ -47,7 +47,8 @@ function MortgageCalculator() {
                     <div className="flex flex-col gap-4">
                         {[10, 15, 20, 30].map((term) => (
                             <label key={term} className="flex items-center gap-2">
-                                <input type="radio" name="loanTerm" value={term} checked={loanTerm === term} onChange={() => setLoanTerm(term)} />
+                                <input type="radio" name="loanTerm" value={term} checked={loanTerm === term}
+                                       onChange={() => setLoanTerm(term)}/>
                                 {term}-Years
                             </label>
                         ))}
@@ -73,32 +74,34 @@ function MortgageCalculator() {
                 <div className="mb-4">
                     <div className="text-sm font-bold">Monthly Interest</div>
                     <div className="text-primary text-3xl font-bold">
-                        ${monthlyInterest ? monthlyInterest.toLocaleString(undefined, { maximumFractionDigits: 2 }) : 0}
+                        ${monthlyInterest ? monthlyInterest.toLocaleString(undefined, {maximumFractionDigits: 2}) : 0}
                     </div>
                     <div className="mt-1 text-xs text-gray-500">
                         This is the monthly payment amount applied to the principal balance and interest.
                     </div>
                 </div>
-                <hr className="border-primary my-4 border-[2px]" />
+                <hr className="border-primary my-4 border-[2px]"/>
                 <div className="mb-4">
                     <div className="text-sm font-bold">Total Monthly Payment</div>
                     <div className="text-primary text-3xl font-bold">
-                        ${monthlyPayment ? monthlyPayment.toLocaleString(undefined, { maximumFractionDigits: 2 }) : 0}
+                        ${monthlyPayment ? monthlyPayment.toLocaleString(undefined, {maximumFractionDigits: 2}) : 0}
                     </div>
                     <div className="mt-1 text-xs text-gray-500">Exclusive of taxes, insurance, PMI, and HOA fees</div>
                 </div>
-                <hr className="border-primary my-4 border-[2px]" />
+                <hr className="border-primary my-4 border-[2px]"/>
                 <div className="mb-4">
                     <div className="font-bold">Take the First Step Towards Your New Home</div>
                     <div className="mt-1 text-xs text-gray-500">
-                        Use this standard calculator to know your monthly mortgage payment based on the home price, down payment, loan term, and
+                        Use this standard calculator to know your monthly mortgage payment based on the home price, down
+                        payment, loan term, and
                         interest rate.
                     </div>
                 </div>
                 <div className="flex justify-center">
-                    <Link className="bg-primary mt-2 rounded-full px-6 py-2 font-bold text-white" href="/contact">
+                    <a className="bg-primary mt-2 rounded-full px-6 py-2 font-bold text-white"
+                       href="https://loanfactory.my1003app.com/1399453/register">
                         APPLY NOW
-                    </Link>
+                    </a>
                 </div>
             </div>
         </div>
@@ -107,9 +110,9 @@ function MortgageCalculator() {
 
 export default function CTA() {
     return (
-        <div className="bg-primary py-16">
+        <div id="calculator" className="bg-primary py-16">
             <h3 className="heading !text-white">See How Much You Can Afford</h3>
-            <MortgageCalculator />
+            <MortgageCalculator/>
             <div className="flex justify-center"></div>
             <div className="flex justify-center">
                 <Link

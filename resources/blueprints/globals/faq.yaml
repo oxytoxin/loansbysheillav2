@@ -1,0 +1,37 @@
+tabs:
+  main:
+    display: Main
+    fields:
+      - handle: faq_sections
+        field:
+          type: grid
+          display: 'FAQ Sections'
+          fields:
+            - handle: faq_section
+              field:
+                type: group
+                display: 'FAQ Section'
+                fields:
+                  - handle: title
+                    field:
+                      type: text
+                      display: Title
+                      validate:
+                        - required
+                  - handle: entries
+                    field:
+                      type: grid
+                      display: Entries
+                      fields:
+                        - handle: question
+                          field:
+                            type: textarea
+                            display: Question
+                            validate:
+                              - required
+                        - handle: answer
+                          field:
+                            type: textarea
+                            display: Answer
+                            validate:
+                              - required

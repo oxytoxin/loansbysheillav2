@@ -1,5 +1,8 @@
 title: Configuration
 data:
-  error_404_entry: 059d4d8d-fc60-49f8-8823-7da10549e84e
-  copyright_since: 2020
-  privacy_statement_type: none
+  error_404_entry: home
+  copyright_name: LoansBySheilla
+  copyright_since: 2025
+  privacy_statement_type: entry
+  privacy_statement_entry: aef46f83-2cbf-4187-b932-5508c2bb90da
+  cookie_notice_type: none
