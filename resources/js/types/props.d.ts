@@ -5,7 +5,7 @@ export type MortgageMoment = {
 
 export type FAQEntry = {
     question: string;
-    answer: string;
+    answer: string
 }
 
 export type FAQSection = {

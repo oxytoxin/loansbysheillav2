@@ -163,6 +163,11 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webonyx/graphql-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/wilderborn/partyline" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/eminos/statamic-iconify" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/studio1902/statamic-peak-browser-appearance" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/studio1902/statamic-peak-seo" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/studio1902/statamic-peak-tools" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/xndbogdan/statamic-bard-text-color" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -176,6 +176,11 @@
       <path value="$PROJECT_DIR$/vendor/fruitcake/php-cors" />
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/vendor/inertiajs/inertia-laravel" />
+      <path value="$PROJECT_DIR$/vendor/studio1902/statamic-peak-browser-appearance" />
+      <path value="$PROJECT_DIR$/vendor/studio1902/statamic-peak-tools" />
+      <path value="$PROJECT_DIR$/vendor/studio1902/statamic-peak-seo" />
+      <path value="$PROJECT_DIR$/vendor/xndbogdan/statamic-bard-text-color" />
+      <path value="$PROJECT_DIR$/vendor/eminos/statamic-iconify" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
@@ -186,6 +191,11 @@
   </component>
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/phpunit.xml" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" paratest_path="$PROJECT_DIR$/vendor/bin/paratest_for_phpstorm" use_configuration_file="true" />
+    </phpunit_settings>
   </component>
   <component name="Psalm">
     <Psalm_settings>

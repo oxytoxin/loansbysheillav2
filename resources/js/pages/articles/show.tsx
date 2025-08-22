@@ -3,7 +3,6 @@ import MainLayout from "@/layouts/main-layout";
 import {useEmbed} from "@/hooks/use-embed";
 
 export default function Show({article, author}) {
-    console.log(article);
     const getEmbedUrl = useEmbed();
     return (
         <MainLayout>
