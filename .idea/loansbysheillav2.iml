@@ -168,6 +168,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/studio1902/statamic-peak-seo" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/studio1902/statamic-peak-tools" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/xndbogdan/statamic-bard-text-color" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/_laravel_idea" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

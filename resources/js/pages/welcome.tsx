@@ -11,13 +11,14 @@ import MortgageProcess from '@/partials/welcome/mortgage-process';
 import Testimonials from '@/partials/welcome/testimonials';
 import WhatWeCanOffer from '@/partials/welcome/what-we-can-offer';
 import {Head} from '@inertiajs/react';
-import {ArticlesGroups, FAQSections, MortgageMoment} from "@/types/props";
+import {ArticlesGroups, FAQSections, MortgageMoment, Review} from "@/types/props";
 import MainLayout from "@/layouts/main-layout";
 
-export default function Welcome({mortgage_moments, faq_sections, articles_groups}: {
+export default function Welcome({mortgage_moments, faq_sections, articles_groups, reviews}: {
     mortgage_moments: MortgageMoment[],
     faq_sections: FAQSections,
-    articles_groups: ArticlesGroups
+    articles_groups: ArticlesGroups,
+    reviews: Review[]
 }) {
     return (
         <>
@@ -36,8 +37,8 @@ export default function Welcome({mortgage_moments, faq_sections, articles_groups
                     <CTA/>
                     <MortgageProcess/>
                     <MortgageMoments {...{mortgage_moments}}/>
-                    <Articles {...{articles_groups: articles_groups}} />
-                    <Testimonials/>
+                    <Articles {...{articles_groups}} />
+                    <Testimonials {...{reviews}} />
                     <Contact/>
                     <FAQ {...{faq_sections}}/>
                     <License/>

@@ -3,7 +3,9 @@
   <component name="LaravelIdeaPersonalSettings">
     <option name="generationStringOptionValues">
       <map>
+        <entry key="createDatabaseMigration.omitDown" value="1" />
         <entry key="createInertiaPage.directory" value="@/layouts/app-layout" />
+        <entry key="postGeneration:migration2" value="" />
       </map>
     </option>
   </component>

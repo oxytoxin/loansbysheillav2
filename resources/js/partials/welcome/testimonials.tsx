@@ -2,68 +2,9 @@ import {cn} from '@/lib/utils';
 import 'swiper/css';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import SwiperControls from './swiper-controls';
+import {Review} from "@/types/props";
 
-export default function Testimonials() {
-    const testimonials = [
-        {
-            rating: 5,
-            text: 'Sheilla has been very helpful from the very beginning of our home buying journey. As a first time buyer with non-US employment record, she helped us prepare my documents to get approval.',
-            author: 'Bermudez-Willcockson, F.',
-            source: 'from Google Reviews',
-            image: '/images/testimonials/bermudez.jpg',
-        },
-        {
-            rating: 5,
-            text: 'Sheilla has been very helpful from the very beginning of our home buying journey. As a first time buyer with non-US employment record, she helped us prepare my documents to get approval.',
-            author: 'Bermudez-Willcockson, F.',
-            source: 'from Google Reviews',
-            image: '/images/testimonials/bermudez.jpg',
-        },
-        {
-            rating: 5,
-            text: 'Sheilla has been very helpful from the very beginning of our home buying journey. As a first time buyer with non-US employment record, she helped us prepare my documents to get approval.',
-            author: 'Bermudez-Willcockson, F.',
-            source: 'from Google Reviews',
-            image: '/images/testimonials/bermudez.jpg',
-        },
-        {
-            rating: 5,
-            text: 'Sheilla has been very helpful from the very beginning of our home buying journey. As a first time buyer with non-US employment record, she helped us prepare my documents to get approval.',
-            author: 'Bermudez-Willcockson, F.',
-            source: 'from Google Reviews',
-            image: '/images/testimonials/bermudez.jpg',
-        },
-        {
-            rating: 5,
-            text: 'Sheilla has been very helpful from the very beginning of our home buying journey. As a first time buyer with non-US employment record, she helped us prepare my documents to get approval.',
-            author: 'Bermudez-Willcockson, F.',
-            source: 'from Google Reviews',
-            image: '/images/testimonials/bermudez.jpg',
-        },
-        {
-            rating: 5,
-            text: 'Sheilla has been very helpful from the very beginning of our home buying journey. As a first time buyer with non-US employment record, she helped us prepare my documents to get approval.',
-            author: 'Bermudez-Willcockson, F.',
-            source: 'from Google Reviews',
-            image: '/images/testimonials/bermudez.jpg',
-        },
-        {
-            rating: 5,
-            text: 'Sheilla has been very helpful from the very beginning of our home buying journey. As a first time buyer with non-US employment record, she helped us prepare my documents to get approval.',
-            author: 'Bermudez-Willcockson, F.',
-            source: 'from Google Reviews',
-            image: '/images/testimonials/bermudez.jpg',
-        },
-        {
-            rating: 5,
-            text: 'Sheilla has been very helpful from the very beginning of our home buying journey. As a first time buyer with non-US employment record, she helped us prepare my documents to get approval.',
-            author: 'Bermudez-Willcockson, F.',
-            source: 'from Google Reviews',
-            image: '/images/testimonials/bermudez.jpg',
-        },
-        // Add more testimonials here
-    ];
-
+export default function Testimonials({reviews}: { reviews: Review[] }) {
     return (
         <div id='reviews' className='pt-64'>
             <h2 className="heading">
@@ -71,8 +12,8 @@ export default function Testimonials() {
             </h2>
             <div>
                 <Swiper centeredSlides={true} loop={true} spaceBetween={30} slidesPerView={4} className="p-8">
-                    {testimonials.map((testimonial, index) => (
-                        <SwiperSlide key={index}>
+                    {reviews.map((review: Review, index: number) => (
+                        <SwiperSlide title={review.content} key={index}>
                             {({isActive}) => (
                                 <div
                                     className={cn(
@@ -87,7 +28,7 @@ export default function Testimonials() {
 
                                     {/* Rating stars */}
                                     <div className="mb-6 flex gap-1">
-                                        {Array.from({length: testimonial.rating}).map((_, i) => (
+                                        {Array.from({length: review.rating}).map((_, i) => (
                                             <svg key={i} className="h-6 w-6 text-yellow-400" fill="currentColor"
                                                  viewBox="0 0 20 20">
                                                 <path
@@ -97,19 +38,19 @@ export default function Testimonials() {
                                     </div>
 
                                     {/* Testimonial text */}
-                                    <p className="relative mb-8 text-sm">{testimonial.text}</p>
+                                    <p className="relative mb-8 text-sm">{review.excerpt}</p>
 
                                     {/* Author info */}
                                     <div className="flex items-center gap-4">
                                         <img
                                             className="h-12 w-12 rounded-full"
-                                            src="https://images.pexels.com/photos/27603433/pexels-photo-27603433/free-photo-of-blonde-beauty-s-eye-catching-glasses.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                            src={review.img_url}
                                             alt="avatar"
                                         />
                                         <div>
                                             <div
-                                                className="text-xs font-bold whitespace-nowrap">{testimonial.author}</div>
-                                            <div className="text-xs text-gray-600">{testimonial.source}</div>
+                                                className="text-xs font-bold whitespace-nowrap">{review.author}</div>
+                                            <div className="text-xs text-gray-600">from {review.source}</div>
                                         </div>
                                     </div>
                                 </div>

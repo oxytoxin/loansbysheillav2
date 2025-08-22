@@ -181,6 +181,7 @@
       <path value="$PROJECT_DIR$/vendor/studio1902/statamic-peak-seo" />
       <path value="$PROJECT_DIR$/vendor/xndbogdan/statamic-bard-text-color" />
       <path value="$PROJECT_DIR$/vendor/eminos/statamic-iconify" />
+      <path value="$PROJECT_DIR$/vendor/_laravel_idea" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

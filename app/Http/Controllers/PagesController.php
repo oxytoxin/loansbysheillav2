@@ -2,6 +2,7 @@
 
     namespace App\Http\Controllers;
 
+    use App\Models\Review;
     use Inertia\Inertia;
     use Statamic\Facades\Entry;
     use Statamic\Facades\GlobalSet;
@@ -28,10 +29,12 @@
                 'tags' => $article['tags'],
                 'author' => $article['author']->name,
             ])->chunk(8, false);
+            $reviews = Review::inRandomOrder()->get();
             return Inertia::render('welcome', [
                 'mortgage_moments' => $mortgage_moments,
                 'faq_sections' => $faq_sections,
                 'articles_groups' => $articles_groups,
+                'reviews' => $reviews,
             ]);
         }
     }

@@ -34,10 +34,18 @@ export default function Navbar() {
             <ul className="flex items-center justify-center gap-8">
                 {navItems.map((item) => (
                     <li className="text-lg tracking-wider" key={item.label}>
-                        <Link href={item.href}
-                              className={url === item.href ? 'text-secondary pb-1' : 'hover:text-secondary pb-1 duration-300'}>
-                            {item.label}
-                        </Link>
+                        {item.href.includes('#') ?
+                            <a href={item.href}
+                               className={url === item.href ? 'text-secondary pb-1' : 'hover:text-secondary pb-1 duration-300'}
+                            >
+                                {item.label}
+                            </a>
+                            :
+                            <Link href={item.href}
+                                  className={url === item.href ? 'text-secondary pb-1' : 'hover:text-secondary pb-1 duration-300'}>
+                                {item.label}
+                            </Link>
+                        }
                     </li>
                 ))}
             </ul>

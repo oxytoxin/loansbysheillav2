@@ -8,6 +8,16 @@ export type FAQEntry = {
     answer: string
 }
 
+export type Review = {
+    source: string;
+    author: string;
+    img_url: string;
+    rating: number;
+    excerpt: string;
+    content: string;
+    date: string;
+}
+
 export type FAQSection = {
     title: string;
     entries: FAQEntry[];
