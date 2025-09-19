@@ -14,6 +14,7 @@
         "inertiajs/inertia-laravel": "^2.0",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
+        "orangehill/iseed": "^3.1",
         "statamic/cms": "^5.60",
         "studio1902/statamic-peak-browser-appearance": "^3.4",
         "studio1902/statamic-peak-seo": "^8.0",

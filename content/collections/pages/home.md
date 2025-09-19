@@ -3,7 +3,7 @@ id: home
 blueprint: home
 title: Home
 template: home
-updated_by: 61702fae-4b6e-428c-81f7-bbae0c6d6a6d
+updated_by: 2
 updated_at: 1740101973
 seo_noindex: false
 seo_nofollow: false

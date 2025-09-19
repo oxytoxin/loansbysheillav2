@@ -8,7 +8,7 @@ seo_nofollow: false
 seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
-updated_by: 61702fae-4b6e-428c-81f7-bbae0c6d6a6d
+updated_by: 2
 updated_at: 1742406774
 members:
   -

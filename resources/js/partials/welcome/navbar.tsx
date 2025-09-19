@@ -8,7 +8,7 @@ export default function Navbar() {
         },
         {
             label: 'RATES',
-            href: '/rates',
+            href: '/#rates',
         },
         {
             label: 'CALCULATOR',
@@ -24,7 +24,7 @@ export default function Navbar() {
         },
         {
             label: 'CONTACT',
-            href: '/contact',
+            href: '/#contact',
         },
     ];
     const {url} = usePage();
