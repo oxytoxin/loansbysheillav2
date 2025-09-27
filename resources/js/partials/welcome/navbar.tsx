@@ -5,10 +5,12 @@ export default function Navbar() {
         {
             label: 'HOME',
             href: '/',
+            type: 'inertia'
         },
         {
             label: 'RATES',
-            href: '/#rates',
+            href: 'https://www.loanfactory.com/today-rates',
+            target: '_blank'
         },
         {
             label: 'CALCULATOR',
@@ -34,17 +36,18 @@ export default function Navbar() {
             <ul className="flex items-center justify-center gap-8">
                 {navItems.map((item) => (
                     <li className="text-lg tracking-wider" key={item.label}>
-                        {item.href.includes('#') ?
-                            <a href={item.href}
-                               className={url === item.href ? 'text-secondary pb-1' : 'hover:text-secondary pb-1 duration-300'}
-                            >
-                                {item.label}
-                            </a>
-                            :
+                        {item.type === 'inertia' ?
                             <Link href={item.href}
                                   className={url === item.href ? 'text-secondary pb-1' : 'hover:text-secondary pb-1 duration-300'}>
                                 {item.label}
                             </Link>
+                            :
+                            <a href={item.href}
+                               target={item.target ?? '_self'}
+                               className={url === item.href ? 'text-secondary pb-1' : 'hover:text-secondary pb-1 duration-300'}
+                            >
+                                {item.label}
+                            </a>
                         }
                     </li>
                 ))}
