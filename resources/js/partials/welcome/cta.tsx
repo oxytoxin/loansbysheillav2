@@ -1,4 +1,3 @@
-import {Link} from '@inertiajs/react';
 import {useState} from 'react';
 
 function MortgageCalculator() {
@@ -115,12 +114,12 @@ export default function CTA() {
             <MortgageCalculator/>
             <div className="flex justify-center"></div>
             <div className="flex justify-center">
-                <Link
-                    className="text-primary mt-auto inline-block animate-pulse rounded-full border border-[#A6A6A6] bg-[#E2E6DB] px-8 py-4 text-center text-2xl font-bold duration-500"
-                    href="/rates"
+                <a target="_blank"
+                   className="text-primary mt-auto inline-block animate-pulse rounded-full border border-[#A6A6A6] bg-[#E2E6DB] px-8 py-4 text-center text-2xl font-bold duration-500"
+                   href="https://www.loanfactory.com/today-rates"
                 >
                     View Live Mortgage Rates
-                </Link>
+                </a>
             </div>
         </div>
     );

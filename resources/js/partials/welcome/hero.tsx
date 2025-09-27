@@ -1,4 +1,3 @@
-import {Link} from '@inertiajs/react';
 import {RiFacebookFill, RiInstagramFill, RiLinkedinFill, RiTiktokFill, RiYoutubeFill} from '@remixicon/react';
 
 export default function Hero() {
@@ -26,12 +25,13 @@ export default function Hero() {
 
                 <div className="absolute inset-x-0 bottom-12 z-10 flex gap-12">
                     <ul className="flex flex-1 items-center justify-stretch gap-12 pl-32 text-xl font-semibold">
-                        <Link
+                        <a
+                            target="_blank"
                             className="bg-secondary hover:bg-accent text-primary w-full rounded-full px-8 py-4 text-center text-2xl font-bold transition duration-300"
-                            href="/"
+                            href="https://www.loanfactory.com/sheilla/"
                         >
                             Request a Quote
-                        </Link>
+                        </a>
                         <a
                             target="_blank"
                             className="bg-secondary hover:bg-accent text-primary w-full rounded-full px-8 py-4 text-center text-2xl font-bold transition duration-300"
@@ -62,26 +62,31 @@ export default function Hero() {
                         <div className="ml-8 flex flex-col items-center text-center">
                             <p>FOLLOW US ON</p>
                             <div className="text-primary mt-2 flex gap-2">
-                                <Link href="/"
-                                      className="hover:bg-card inline-flex items-center justify-center rounded bg-white p-2">
+                                <a href="https://www.facebook.com/Loansbysheilla"
+                                   target="_blank"
+                                   className="hover:bg-card inline-flex items-center justify-center rounded bg-white p-2">
                                     <RiFacebookFill className="size-6"/>
-                                </Link>
-                                <Link href="/"
-                                      className="hover:bg-card inline-flex items-center justify-center rounded bg-white p-2">
+                                </a>
+                                <a href="https://www.instagram.com/loansbysheilla"
+                                   target="_blank"
+                                   className="hover:bg-card inline-flex items-center justify-center rounded bg-white p-2">
                                     <RiInstagramFill className="size-6"/>
-                                </Link>
-                                <Link href="/"
-                                      className="hover:bg-card inline-flex items-center justify-center rounded bg-white p-2">
+                                </a>
+                                <a href="https://www.linkedin.com/in/sheillalavadia/"
+                                   target="_blank"
+                                   className="hover:bg-card inline-flex items-center justify-center rounded bg-white p-2">
                                     <RiLinkedinFill className="size-6"/>
-                                </Link>
-                                <Link href="/"
-                                      className="hover:bg-card inline-flex items-center justify-center rounded bg-white p-2">
+                                </a>
+                                <a href="https://www.youtube.com/@loansbysheilla"
+                                   target="_blank"
+                                   className="hover:bg-card inline-flex items-center justify-center rounded bg-white p-2">
                                     <RiYoutubeFill className="size-6"/>
-                                </Link>
-                                <Link href="/"
-                                      className="hover:bg-card inline-flex items-center justify-center rounded bg-white p-2">
+                                </a>
+                                <a href="https://www.tiktok.com/@moneytalkwithsheilla"
+                                   target="_blank"
+                                   className="hover:bg-card inline-flex items-center justify-center rounded bg-white p-2">
                                     <RiTiktokFill className="size-6"/>
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>

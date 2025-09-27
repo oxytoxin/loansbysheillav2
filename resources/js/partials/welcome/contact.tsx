@@ -1,5 +1,6 @@
 import {Head} from "@inertiajs/react";
 import {useEffect} from "react";
+import {RiFacebookFill, RiInstagramFill, RiLinkedinFill, RiTiktokFill, RiYoutubeFill} from "@remixicon/react";
 
 export default function Contact() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -67,17 +68,31 @@ export default function Contact() {
                             <div className="flex items-center justify-between rounded-lg bg-white p-4 shadow-sm">
                                 <div className="font-semibold">Social Media</div>
                                 <div className="flex gap-2">
-                                    {['facebook', 'instagram', 'linkedin', 'youtube', 'tiktok'].map((social) => (
-                                        <a
-                                            key={social}
-                                            href="#"
-                                            target="_blank"
-                                            className="bg-primary flex h-10 w-10 items-center justify-center rounded-xl text-white"
-                                        >
-                                            <span className="sr-only">{social}</span>
-                                            <SocialIcon type={social} className="h-5 w-5"/>
-                                        </a>
-                                    ))}
+                                    <a href="https://www.facebook.com/Loansbysheilla"
+                                       target="_blank"
+                                       className="inline-flex items-center justify-center rounded bg-primary text-white p-2">
+                                        <RiFacebookFill className="size-6"/>
+                                    </a>
+                                    <a href="https://www.instagram.com/loansbysheilla"
+                                       target="_blank"
+                                       className="inline-flex items-center justify-center rounded bg-primary text-white p-2">
+                                        <RiInstagramFill className="size-6"/>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/sheillalavadia/"
+                                       target="_blank"
+                                       className="inline-flex items-center justify-center rounded bg-primary text-white p-2">
+                                        <RiLinkedinFill className="size-6"/>
+                                    </a>
+                                    <a href="https://www.youtube.com/@loansbysheilla"
+                                       target="_blank"
+                                       className="inline-flex items-center justify-center rounded bg-primary text-white p-2">
+                                        <RiYoutubeFill className="size-6"/>
+                                    </a>
+                                    <a href="https://www.tiktok.com/@moneytalkwithsheilla"
+                                       target="_blank"
+                                       className="inline-flex items-center justify-center rounded bg-primary text-white p-2">
+                                        <RiTiktokFill className="size-6"/>
+                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -54,21 +54,22 @@ export default function Navbar() {
             </ul>
             <ul className="flex items-center gap-12">
                 <li>
-                    <Link
+                    <a
+                        target="_blank"
                         className="hover:bg-secondary inline-block rounded-full bg-white px-8 py-1 text-xl font-bold whitespace-nowrap text-black transition duration-300"
                         href="https://loanfactory.my1003app.com/1399453/register"
                     >
                         APPLY NOW
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link
+                    <a
                         target="_blank"
                         className="hover:bg-secondary inline-block rounded-full bg-white px-8 py-1 text-xl font-bold whitespace-nowrap text-black transition duration-300"
-                        href="/"
+                        href="https://www.loanfactory.com/sheilla/login"
                     >
                         SIGN IN
-                    </Link>
+                    </a>
                 </li>
             </ul>
         </div>
