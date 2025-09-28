@@ -30,11 +30,17 @@
                 'author' => $article['author']->name,
             ])->chunk(8, false);
             $reviews = Review::inRandomOrder()->get();
+            $guides = collect(Entry::whereCollection('guides')->all())->map(fn($article) => [
+                'icon' => $article['icon']['body'],
+                'heading' => $article['heading'],
+                'url' => $article['url'],
+            ]);
             return Inertia::render('welcome', [
                 'mortgage_moments' => $mortgage_moments,
                 'faq_sections' => $faq_sections,
                 'articles_groups' => $articles_groups,
                 'reviews' => $reviews,
+                'guides' => $guides,
             ]);
         }
     }

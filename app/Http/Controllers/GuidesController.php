@@ -2,17 +2,17 @@
 
     namespace App\Http\Controllers;
 
-    use Illuminate\Support\Facades\Request;
     use Inertia\Inertia;
+    use Request;
     use Statamic\Facades\Entry;
 
-    class ArticlesController extends Controller
+    class GuidesController extends Controller
     {
         public function show(Request $request, $slug)
         {
-            $article = Entry::whereCollection('articles')->where('slug', $slug)->first();
+            $article = Entry::whereCollection('guides')->where('slug', $slug)->first();
             abort_if(!$article, 404);
-            return Inertia::render('articles/show', [
+            return Inertia::render('guides/show', [
                 'article' => $article,
                 'author' => $article->author->name,
             ]);

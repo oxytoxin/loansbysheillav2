@@ -14,8 +14,8 @@ export default function MortgageMoments({mortgage_moments}: { mortgage_moments: 
                     style={{clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 0)'}}
                 />
                 <div className="mx-auto px-4 pt-32 pb-48">
-                    <h2 className="mb-20 text-center text-5xl tracking-wide text-white">
-                        <strong>Mortgage</strong> Moments
+                    <h2 className="mb-20 heading !text-white">
+                        Mortgage Moments
                     </h2>
                     <div className="overflow-hidden">
                         <div className="pb-16">

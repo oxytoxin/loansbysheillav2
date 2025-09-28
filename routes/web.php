@@ -1,6 +1,7 @@
 <?php
 
     use App\Http\Controllers\ArticlesController;
+    use App\Http\Controllers\GuidesController;
     use App\Http\Controllers\PagesController;
     use Illuminate\Support\Facades\Route;
     use Inertia\Inertia;
@@ -8,6 +9,8 @@
     Route::get('/', [PagesController::class, 'index'])->name('home');
     Route::get('/learning-center/{slug}',
         [ArticlesController::class, 'show'])->name('articles.show');
+    Route::get('/guides/{slug}',
+        [GuidesController::class, 'show'])->name('guides.show');
 
     Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('dashboard', function () {

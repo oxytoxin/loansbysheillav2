@@ -10,7 +10,7 @@ export default function Show({article, author}) {
             <section
                 className="relative w-full h-auto overflow-hidden object-cover">
                 <div className="absolute inset-0 z-0 h-full bg-green-900 opacity-50"></div>
-                <img className="absolute inset-0  w-full z-[-1]" src={article.featured_image.url}
+                <img className="absolute inset-0  w-full z-[-1]" src={article.featured_image?.url}
                      alt={article.title}/>
                 <div className="container flex items-center justify-center h-auto py-48 mx-auto">
                     <div className="z-10 flex flex-col items-center px-8 xl:px-0">

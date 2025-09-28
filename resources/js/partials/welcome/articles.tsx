@@ -9,8 +9,8 @@ export default function Articles({articles_groups}: { articles_groups: ArticlesG
 
     return (
         <div id="articles" className="mx-32 mt-16 flex flex-col items-center justify-center">
-            <h2 className="text-primary my-8 text-4xl">
-                Know More About <strong>Homebuying</strong>
+            <h2 className="my-8 heading">
+                Know More About Homebuying
             </h2>
             <div className="relative w-full">
                 <Swiper

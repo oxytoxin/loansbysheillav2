@@ -2,7 +2,7 @@ import {RiCheckFill} from '@remixicon/react';
 
 export default function WhatWeCanOffer() {
     return (
-        <div className="mt-16">
+        <div id='services' className="mt-16">
             <h3 className="heading">What We Can Offer</h3>
             <div className="px-64">
                 <div className="flex gap-8">

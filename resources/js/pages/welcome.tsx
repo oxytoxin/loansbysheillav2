@@ -14,7 +14,7 @@ import {Head} from '@inertiajs/react';
 import {ArticlesGroups, FAQSections, MortgageMoment, Review} from "@/types/props";
 import MainLayout from "@/layouts/main-layout";
 
-export default function Welcome({mortgage_moments, faq_sections, articles_groups, reviews}: {
+export default function Welcome({mortgage_moments, faq_sections, articles_groups, reviews, guides}: {
     mortgage_moments: MortgageMoment[],
     faq_sections: FAQSections,
     articles_groups: ArticlesGroups,
@@ -33,7 +33,7 @@ export default function Welcome({mortgage_moments, faq_sections, articles_groups
                 <MainLayout>
                     <Hero/>
                     <WhatWeCanOffer/>
-                    <HeroSecondary/>
+                    <HeroSecondary guides={guides}/>
                     <CTA/>
                     <MortgageProcess/>
                     <MortgageMoments {...{mortgage_moments}}/>
