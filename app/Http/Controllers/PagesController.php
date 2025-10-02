@@ -20,7 +20,7 @@
             $faq_sections = collect(GlobalSet::findByHandle('faq')->inDefaultSite()->get('faq_sections'))->map(fn(
                 $section
             ) => $section['faq_section']);
-            $articles_groups = collect(Entry::whereCollection('articles')->all())->map(fn($article) => [
+            $articles = collect(Entry::whereCollection('articles')->all())->map(fn($article) => [
                 'id' => $article['id'],
                 'title' => $article['title'],
                 'url' => $article['url'],
@@ -28,7 +28,7 @@
                 'date' => $article['date']->format('F j, Y'),
                 'tags' => $article['tags'],
                 'author' => $article['author']->name,
-            ])->chunk(8, false);
+            ]);
             $reviews = Review::inRandomOrder()->get();
             $guides = collect(Entry::whereCollection('guides')->all())->map(fn($article) => [
                 'icon' => $article['icon']['body'],
@@ -38,7 +38,7 @@
             return Inertia::render('welcome', [
                 'mortgage_moments' => $mortgage_moments,
                 'faq_sections' => $faq_sections,
-                'articles_groups' => $articles_groups,
+                'articles' => $articles,
                 'reviews' => $reviews,
                 'guides' => $guides,
             ]);

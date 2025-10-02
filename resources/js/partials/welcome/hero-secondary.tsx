@@ -36,13 +36,13 @@ export default function HeroSecondary({guides}) {
             <h3 className="heading">
                 Are You Looking To
             </h3>
-            <div className="mx-auto mt-20 flex max-w-7xl flex-wrap justify-center gap-16 text-white">
+            <div className="mx-auto md:mt-20 flex max-w-7xl flex-wrap justify-center md:gap-16 gap-4 text-white">
                 {guides.map((item, index) => (
                     <Link
                         href={item.url}
                         preserveScroll={true}
                         key={index}
-                        className="hover:text-primary flex min-w-96 shrink-0 flex-col items-center rounded-lg border border-[#074A42] bg-[#265D41] p-8 text-2xl duration-300 hover:scale-105 hover:border-[#A6A6A6] hover:bg-[#D9E2E1]"
+                        className="hover:text-primary flex md:min-w-96 w-full md:w-auto shrink-0 flex-col items-center rounded-lg border border-[#074A42] bg-[#265D41] p-8 md:text-2xl duration-300 hover:scale-105 hover:border-[#A6A6A6] hover:bg-[#D9E2E1]"
                     >
                         <Staticon size={60} icon={item.icon}/>
                         <p className='mt-4 text-center' dangerouslySetInnerHTML={{__html: item.heading}}></p>

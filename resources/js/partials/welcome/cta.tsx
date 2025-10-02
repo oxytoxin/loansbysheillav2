@@ -13,7 +13,7 @@ function MortgageCalculator() {
     const monthlyPayment = homePrice === 0 ? 0 : (loanAmount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
 
     return (
-        <div className="mx-auto my-8 flex max-w-4xl flex-col gap-8 rounded-lg bg-white p-6 shadow-md md:flex-row">
+        <div className="mx-auto my-8 flex max-w-4xl flex-col gap-8 lg:rounded-lg bg-white p-6 shadow-md md:flex-row">
             <div className="flex-1">
                 <h4 className="text-primary mb-4 text-lg font-bold">Mortgage Calculator</h4>
                 <div className="mb-4">
@@ -69,7 +69,7 @@ function MortgageCalculator() {
                     </div>
                 </div>
             </div>
-            <div className="flex-1 border-l pl-8">
+            <div className="flex-1 md:border-l md:pl-8">
                 <div className="mb-4">
                     <div className="text-sm font-bold">Monthly Interest</div>
                     <div className="text-primary text-3xl font-bold">

@@ -174,5 +174,5 @@
 }
 
 .heading {
-    @apply text-primary mb-16 text-center text-6xl font-bold;
+    @apply text-primary mb-16 text-center text-3xl md:text-4xl lg:text-6xl font-bold;
 }

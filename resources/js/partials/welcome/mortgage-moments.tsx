@@ -20,9 +20,19 @@ export default function MortgageMoments({mortgage_moments}: { mortgage_moments: 
                     <div className="overflow-hidden">
                         <div className="pb-16">
                             <Swiper
+                                breakpoints={
+                                    {
+                                        760: {
+                                            slidesPerView: 2,
+                                        },
+                                        1368: {
+                                            slidesPerView: 5,
+                                        }
+                                    }
+                                }
                                 spaceBetween={10}
                                 centeredSlides={true}
-                                slidesPerView={5}
+                                slidesPerView={1}
                                 loop={true}
                                 className="[&_.swiper-pagination-bullet]:!bg-card !overflow-visible [&_.swiper-pagination]:!bottom-[-4rem] [&_.swiper-pagination-bullet-active]:!bg-white"
                             >

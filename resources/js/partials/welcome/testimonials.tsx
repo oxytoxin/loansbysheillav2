@@ -6,12 +6,27 @@ import {Review} from "@/types/props";
 
 export default function Testimonials({reviews}: { reviews: Review[] }) {
     return (
-        <div id='reviews' className='pt-64'>
+        <div id='reviews' className='md:pt-64 pt-32 px-4 md:px-0'>
             <h2 className="heading">
                 What My Clients Say About Me
             </h2>
             <div>
-                <Swiper centeredSlides={true} loop={true} spaceBetween={30} slidesPerView={4} className="p-8">
+                <Swiper
+                    centeredSlides={true}
+                    loop={true}
+                    spaceBetween={30}
+                    slidesPerView={1}
+                    breakpoints={
+                        {
+                            760: {
+                                slidesPerView: 2,
+                            },
+                            1368: {
+                                slidesPerView: 4,
+                            }
+                        }
+                    }
+                    className="p-8">
                     {reviews.map((review: Review, index: number) => (
                         <SwiperSlide title={review.content} key={index}>
                             {({isActive}) => (

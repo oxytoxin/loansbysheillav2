@@ -11,7 +11,7 @@ export default function FAQ({faq_sections}: { faq_sections: FAQSections }) {
 
     return (
         <div className="relative mt-32">
-            <div className="mx-auto px-96">
+            <div className="mx-auto lg:px-96 px-8 md:px-16">
                 <h2 className="heading mb-12">
                     Frequently Asked Questions
                 </h2>

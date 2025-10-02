@@ -15,7 +15,7 @@ export default function Contact() {
                 <script src="https://embed.homebotapp.com/lgw/v1/widget.js"></script>
             </Head>
             <div id="contact" className="bg-card mt-32 py-32">
-                <div className="mx-auto grid grid-cols-2 max-w-7xl gap-16 px-8">
+                <div className="mx-auto grid lg:grid-cols-2 max-w-7xl gap-16 px-8">
                     {/* Contact Details */}
                     <div>
                         <h2 className="text-primary mb-8 text-4xl font-semibold">Contact Details</h2>
@@ -102,7 +102,7 @@ export default function Contact() {
                         <h2 className="text-primary mb-8 text-4xl font-semibold">Get In Touch With Us</h2>
 
                         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid md:grid-cols-2 gap-4">
                                 <input type="text" placeholder="Name"
                                        className="rounded-lg border border-gray-200 px-4 py-2"/>
                                 <input type="tel" placeholder="Phone"
@@ -117,7 +117,7 @@ export default function Contact() {
 
                             <div className="flex items-start gap-2">
                                 <input type="checkbox" id="consent" className="mt-1.5"/>
-                                <label htmlFor="consent" className="text-sm">
+                                <label htmlFor="consent" className="md:text-sm text-xs">
                                     I consent to receive <strong className="text-red-500"> SMS TEXT
                                     MESSAGES</strong> from
                                     <strong className="text-red-500"> LOANS BY SHEILLA</strong> (our message frequency

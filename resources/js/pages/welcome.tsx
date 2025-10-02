@@ -1,33 +1,27 @@
-import Articles from '@/partials/welcome/articles';
-import Contact from '@/partials/welcome/contact';
-import CTA from '@/partials/welcome/cta';
-import FAQ from '@/partials/welcome/faq';
-import Footer from '@/partials/welcome/footer';
 import Hero from '@/partials/welcome/hero';
-import HeroSecondary from '@/partials/welcome/hero-secondary';
-import License from '@/partials/welcome/license';
-import MortgageMoments from '@/partials/welcome/mortgage-moments';
-import MortgageProcess from '@/partials/welcome/mortgage-process';
-import Testimonials from '@/partials/welcome/testimonials';
-import WhatWeCanOffer from '@/partials/welcome/what-we-can-offer';
 import {Head} from '@inertiajs/react';
-import {ArticlesGroups, FAQSections, MortgageMoment, Review} from "@/types/props";
+import {Article, FAQSections, MortgageMoment, Review} from "@/types/props";
 import MainLayout from "@/layouts/main-layout";
+import WhatWeCanOffer from "@/partials/welcome/what-we-can-offer";
+import HeroSecondary from "@/partials/welcome/hero-secondary";
+import CTA from "@/partials/welcome/cta";
+import MortgageProcess from "@/partials/welcome/mortgage-process";
+import MortgageMoments from "@/partials/welcome/mortgage-moments";
+import Articles from "@/partials/welcome/articles";
+import Testimonials from "@/partials/welcome/testimonials";
+import Contact from "@/partials/welcome/contact";
+import FAQ from "@/partials/welcome/faq";
+import License from "@/partials/welcome/license";
+import Footer from "@/partials/welcome/footer";
 
-export default function Welcome({mortgage_moments, faq_sections, articles_groups, reviews, guides}: {
+export default function Welcome({mortgage_moments, faq_sections, articles, reviews, guides}: {
     mortgage_moments: MortgageMoment[],
     faq_sections: FAQSections,
-    articles_groups: ArticlesGroups,
+    articles: Article[],
     reviews: Review[]
 }) {
     return (
         <>
-            <div className="bg-primary fixed inset-0 z-10 grid place-items-center text-white sm:hidden">
-                <div>
-                    <h3 className="text-xl">Mobile View Coming Soon!</h3>
-                    <h1 className="mt-4 text-2xl font-semibold">Loans By Sheilla</h1>
-                </div>
-            </div>
             <div>
                 <Head title="Welcome"/>
                 <MainLayout>
@@ -37,7 +31,7 @@ export default function Welcome({mortgage_moments, faq_sections, articles_groups
                     <CTA/>
                     <MortgageProcess/>
                     <MortgageMoments {...{mortgage_moments}}/>
-                    <Articles {...{articles_groups}} />
+                    <Articles {...{articles}} />
                     <Testimonials {...{reviews}} />
                     <Contact/>
                     <FAQ {...{faq_sections}}/>
